@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/mainAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:id="@+id/appBarText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="How can we help you??"
+            android:textAlignment="center"
+            android:textColor="@color/colorTextIcons"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/addQuestionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorTextIcons"
+            android:drawableLeft="@drawable/ic_add_circle_outline_black_24dp"
+            android:text="post"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="300dp"
+            android:textColor="#040080" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Top Questions"
+        android:textColor="@color/colorAccent"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="4dp"
+        android:layout_below="@id/mainAppBar"
+        android:id="@+id/mainActivityTitle" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/questionsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_below="@id/mainActivityTitle"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp" />
+
+</RelativeLayout>
+</ScrollView>

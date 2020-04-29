@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorBlack">#000</color>
+    <color name="colorPrimary">#958E94</color>
+    <color name="colorPrimaryDark">#192770</color>
+    <color name="colorPrimaryLight">#FFCCBC</color>
+    <color name="colorTextIcons">#FCFBFB</color>
+    <color name="colorAccent">#040404</color>
+    <color name="colorPrimaryText">#B6B6B6</color>
+    <color name="colorSecondaryText">#727272</color>
+    <color name="colorDivider">#B6B6B6</color>
+    <color name="primary">#F44336</color>
+    <color name="primary_light">#FFCDD2</color>
+    <color name="accent">#FF5252</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="appbarbg">#EF3535</color>
+
+</resources>

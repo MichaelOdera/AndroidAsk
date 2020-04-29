@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "78203675183",
+    "firebase_url": "https://faq-project-50271.firebaseio.com",
+    "project_id": "faq-project-50271",
+    "storage_bucket": "faq-project-50271.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:78203675183:android:f62110910ec599b2bd5cda",
+        "android_client_info": {
+          "package_name": "com.moringa.faqs_project"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "78203675183-8ahsjhdp9ddh81lufgqs17hinf74qebj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBYbHZKQppC8mpD9bQJblorOaSzJ3OfCzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "78203675183-8ahsjhdp9ddh81lufgqs17hinf74qebj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

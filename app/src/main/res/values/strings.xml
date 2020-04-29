@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FAQs App</string>
+    <string name="most_frequent_asked_questions_answers_n_faq_s"><![CDATA[Most Frequent Asked Questions & Answers /n FAQ\'s]]></string>
+    <string name="what_is_the_difference_between_java_and_javascript">What is the difference between java and javascript</string>
+    <string name="_13_07_2020_11_04pm">13/07/2020 @ 11:04pm</string>
+    <string name="posted_by_jonah_makori">Posted By: Jonah Makori</string>
+    <string name="on_13_07_2020_11_04pm">On: _13_07_2020_ @/11_04pm</string>
+    <string name="add_an_answer">Add an answer</string>
+    <string name="i_really_need_a_good_explanation_to_differentiate_the_two">I really need a good explanation to differentiate the two</string>
+    <string name="a_confusing_question">A confusing Question</string>
+    <string name="_1">1.</string>
+    <string name="on_13_07_2020_n_at_11_04pm">On : 13/07/2020 /n At: 11:04pm</string>
+</resources>
