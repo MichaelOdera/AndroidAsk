@@ -10,4 +10,6 @@
     <string name="a_confusing_question">A confusing Question</string>
     <string name="_1">1.</string>
     <string name="on_13_07_2020_n_at_11_04pm">On : 13/07/2020 /n At: 11:04pm</string>
+    <string name="answer_submitted_successfully">Answer Submitted Successfully</string>
+    <string name="back_to_question">Back to Question</string>
 </resources>

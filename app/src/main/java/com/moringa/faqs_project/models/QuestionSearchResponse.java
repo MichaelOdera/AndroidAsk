@@ -1,15 +1,16 @@
-
 package com.moringa.faqs_project.models;
 
-
+import java.io.Serializable;
+import java.util.List;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
+import com.moringa.faqs_project.models.Answer;
 
 import org.parceler.Parcel;
 
 @Parcel
-
-public class QuestionSearchResponse {
+public class QuestionSearchResponse implements Serializable
+{
 
     @SerializedName("id")
     @Expose
@@ -17,9 +18,6 @@ public class QuestionSearchResponse {
     @SerializedName("title")
     @Expose
     private String title;
-    @SerializedName("description")
-    @Expose
-    private String description;
     @SerializedName("body")
     @Expose
     private String body;
@@ -29,17 +27,35 @@ public class QuestionSearchResponse {
     @SerializedName("poster")
     @Expose
     private Integer poster;
-//    @SerializedName("tags")
-//    @Expose
-//    private List<Object> tags = null;
+    @SerializedName("answers")
+    @Expose
+    private List<Answer> answers = null;
+    private final static long serialVersionUID = -124300061997938872L;
 
-    public QuestionSearchResponse(){
-
+    /**
+     * No args constructor for use in serialization
+     * 
+     */
+    public QuestionSearchResponse() {
     }
 
-    public QuestionSearchResponse(String title, String body) {
+    /**
+     * 
+     * @param created
+     * @param answers
+     * @param id
+     * @param title
+     * @param body
+     * @param poster
+     */
+    public QuestionSearchResponse(Integer id, String title, String body, String created, Integer poster, List<Answer> answers) {
+        super();
+        this.id = id;
         this.title = title;
         this.body = body;
+        this.created = created;
+        this.poster = poster;
+        this.answers = answers;
     }
 
     public Integer getId() {
@@ -56,14 +72,6 @@ public class QuestionSearchResponse {
 
     public void setTitle(String title) {
         this.title = title;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getBody() {
@@ -90,12 +98,12 @@ public class QuestionSearchResponse {
         this.poster = poster;
     }
 
-//    public List<Object> getTags() {
-//        return tags;
-//    }
-//
-//    public void setTags(List<Object> tags) {
-//        this.tags = tags;
-//    }
+    public List<Answer> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
+    }
 
 }

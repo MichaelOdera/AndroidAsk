@@ -11,6 +11,7 @@ import com.moringa.faqs_project.Network.Faq_Client;
 import com.moringa.faqs_project.Network.M_faq_Interface;
 import com.moringa.faqs_project.R;
 import com.moringa.faqs_project.models.Answer;
+import com.moringa.faqs_project.models.PostAnswer;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -19,7 +20,7 @@ import retrofit2.Callback;
 public class PostAnswerActivity extends AppCompatActivity {
     @BindView(R.id.postAnswerBody) EditText mPostAnswerBody;
     @BindView(R.id.postAnswerButton) Button mPostAnswerButton;
-    private Answer answer;
+    private PostAnswer answer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,37 +33,33 @@ public class PostAnswerActivity extends AppCompatActivity {
         mPostAnswerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-//                String answerText = mPostAnswerBody.getText().toString();
-//                postAnswer(answerText, questionId);
-                postAnswer();
-                startActivity(new Intent(PostAnswerActivity.this, QuestionDetailActivity.class));
+                postAnswer(questionId);
+                startActivity(new Intent(PostAnswerActivity.this, AnswerResponseActivity.class));
             }
         });
     }
 
-    //private void postAnswer(String answerText, int questionId) {
-    private void postAnswer() {
+
+    private void postAnswer(int questionId) {
         String  body = mPostAnswerBody.getText().toString();
         M_faq_Interface client = Faq_Client.getClient();
-        Call<Answer> call = client.postAnswer(body);
-        call.enqueue(new Callback<Answer>(){
+        Call<PostAnswer> call = client.postAnswer(body);
+        call.enqueue(new Callback<PostAnswer>(){
             @Override
-            public void onResponse(retrofit2.Call<Answer> call, retrofit2.Response<Answer> response) {
+            public void onResponse(retrofit2.Call<PostAnswer> call, retrofit2.Response<PostAnswer> response) {
                 if(response.isSuccessful()){
                     assert response.body() != null;
                     answer = response.body();
-//                    answer.setBody(answerText);
-//                    answer.setQuestion(questionId);
-//                    assert response.body() != null;
-//                    answer = response.body();
-                    Toast.makeText(PostAnswerActivity.this, "successfully created", Toast.LENGTH_LONG).show();
+                    answer.setQuestion(questionId);
+                    Toast.makeText(PostAnswerActivity.this, "Answer Successfully Added", Toast.LENGTH_LONG).show();
                 }
             }
+
             @Override
-            public void onFailure(retrofit2.Call<Answer> call, Throwable t) {
+            public void onFailure(Call<PostAnswer> call, Throwable t) {
                 Toast.makeText(PostAnswerActivity.this, "Something went wrong", Toast.LENGTH_LONG).show();
             }
+
         });
     }
 }

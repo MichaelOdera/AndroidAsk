@@ -61,9 +61,11 @@ public class QuestionDetailActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 question = Parcels.unwrap(getIntent().getParcelableExtra("question"));
+                assert question != null;
                 int questionId = question.getId();
-
-                startActivity(new Intent(getApplicationContext(), PostAnswerActivity.class));
+                Intent intent = new Intent(QuestionDetailActivity.this, PostAnswerActivity.class);
+                intent.putExtra("questionId", questionId);
+                startActivity(intent);
                 Toast.makeText(QuestionDetailActivity.this , "Button Clicked", Toast.LENGTH_SHORT).show();
             }
         });
@@ -74,7 +76,7 @@ public class QuestionDetailActivity extends AppCompatActivity {
         mQuestionId.setText(question.getId().toString());
         mQuestionTitle.setText(question.getTitle());
         mQuestionBody.setText(question.getBody());
-        mQuestionPostedBy.setText(question.getPoster());
+        //mQuestionPostedBy.setText(question.getPoster());
         mQuestionPostedAt.setText(question.getCreated().substring(0, 10));
 
         M_faq_Interface client = Faq_Client.getClient();

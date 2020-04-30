@@ -8,7 +8,7 @@ import org.parceler.Parcel;
 
 @Parcel
 
-public class Answer implements Serializable
+public class PostAnswer implements Serializable
 {
 
     @SerializedName("id")
@@ -26,24 +26,24 @@ public class Answer implements Serializable
     @SerializedName("poster")
     @Expose
     private Integer poster;
-    private final static long serialVersionUID = -2872654160434982540L;
+    private final static long serialVersionUID = -1955730622562357381L;
 
     /**
      * No args constructor for use in serialization
-     * 
+     *
      */
-    public Answer() {
+    public PostAnswer() {
     }
 
     /**
-     * 
+     *
      * @param question
      * @param created
      * @param id
      * @param body
      * @param poster
      */
-    public Answer(Integer id, Integer question, String created, String body, Integer poster) {
+    public PostAnswer(Integer id, Integer question, String created, String body, Integer poster) {
         super();
         this.id = id;
         this.question = question;

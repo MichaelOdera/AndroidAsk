@@ -1,6 +1,7 @@
 package com.moringa.faqs_project.Network;
 
 import com.moringa.faqs_project.models.Answer;
+import com.moringa.faqs_project.models.PostAnswer;
 import com.moringa.faqs_project.models.QuestionSearchResponse;
 
 import java.util.List;
@@ -22,10 +23,14 @@ public interface M_faq_Interface {
 
     @FormUrlEncoded
     @POST("api/v1/question")
-    Call <QuestionSearchResponse> postQuestion(@Field("title") String title,
-                                 @Field("body") String body);
+    Call <QuestionSearchResponse> postQuestion(
+            @Field("title") String title,
+            @Field("body") String body
+    );
 
     @FormUrlEncoded
     @POST("api/v1/answer")
-    Call<Answer> postAnswer(@Field("body") String body);
+    Call<PostAnswer> postAnswer(
+            @Field("body") String body
+    );
 }
